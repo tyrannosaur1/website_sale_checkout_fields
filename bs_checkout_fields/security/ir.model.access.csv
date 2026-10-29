@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_checkout_field_public,website.checkout.field public,model_website_checkout_field,base.group_public,1,0,0,0
+access_website_checkout_field_portal,website.checkout.field portal,model_website_checkout_field,base.group_portal,1,0,0,0
+access_website_checkout_field_user,website.checkout.field user,model_website_checkout_field,base.group_user,1,0,0,0
+access_website_checkout_field_designer,website.checkout.field designer,model_website_checkout_field,website.group_website_designer,1,1,1,1
