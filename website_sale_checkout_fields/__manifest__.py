@@ -6,6 +6,8 @@
                "checkout: a shorter form for the fields you do not need, and a "
                "server-side check for the ones you do.",
     "author": "ModForge",
+        "images": ["static/description/screenshot_1.png",
+        "static/description/screenshot_2.png",],
     "license": "OPL-1",
     "category": "Website/Website",
     "depends": ["website_sale"],
