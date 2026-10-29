@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- The settings block: the eight fields, once, next to the rest of the
+         website's settings. The list has no "Add a line" and no bin icon on
+         purpose: the set of fields is the checkout's, not a list to build. -->
+    <record id="view_website_form_checkout_fields" model="ir.ui.view">
+        <field name="name">website.form.checkout.fields</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Checkout Fields" name="page_checkout_fields">
+                    <div class="text-muted mb-3" colspan="2">
+                        The address form of the shop. Hide a field the shop does not
+                        need, ask for one it usually leaves optional, or give it the
+                        wording your customers use. Street and Country stay: the shop
+                        cannot deliver an address without them.
+                    </div>
+                    <field name="checkout_field_ids" nolabel="1">
+                        <list editable="bottom" create="false" delete="false">
+                            <field name="sequence" widget="handle"/>
+                            <field name="stock_label" string="Field" readonly="1"/>
+                            <field name="visibility" readonly="not can_be_hidden"/>
+                            <field name="required" readonly="not can_be_required"/>
+                            <field name="label" placeholder="The shop's own wording"/>
+                            <field name="can_be_hidden" column_invisible="1"/>
+                            <field name="can_be_required" column_invisible="1"/>
+                            <field name="field_name" column_invisible="1"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
