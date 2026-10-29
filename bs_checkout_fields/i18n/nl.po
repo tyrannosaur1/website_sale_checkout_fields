@@ -1,0 +1,242 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bs_checkout_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20250909\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-29 05:44+0000\n"
+"PO-Revision-Date: 2026-10-29\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/website.py:0
+msgid "%(field)s is required by this website's checkout settings."
+msgstr "%(field)s is verplicht volgens de afrekeninstellingen van deze website."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,help:bs_checkout_fields.field_website_checkout_field__visibility
+msgid "A hidden field is not rendered and its value is left untouched on addresses that already carry one."
+msgstr "Een verborgen veld wordt niet weergegeven en de waarde ervan blijft ongewijzigd op adressen die er al een hebben."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,help:bs_checkout_fields.field_website_checkout_field__required
+msgid "Ask for this field on every checkout address, even on the shipping form where the shop would otherwise leave it empty."
+msgstr "Vraag dit veld bij elk adres bij het afrekenen, ook op het leveringsformulier waar de winkel het anders leeg laat."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__can_be_hidden
+msgid "Can Be Hidden"
+msgstr "Kan verborgen worden"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__can_be_required
+msgid "Can Be Required"
+msgstr "Kan verplicht worden"
+
+#. module: bs_checkout_fields
+#: model:ir.model,name:bs_checkout_fields.model_website_checkout_field
+msgid "Checkout Address Field"
+msgstr "Adresveld bij het afrekenen"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website__checkout_field_ids
+msgid "Checkout Address Fields"
+msgstr "Adresvelden bij het afrekenen"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid "Checkout Fields"
+msgstr "Velden bij het afrekenen"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__city
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "City"
+msgstr "Plaats"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__company
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Company Name"
+msgstr "Bedrijfsnaam"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__country
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Country"
+msgstr "Land"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__field_name
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid "Field"
+msgstr "Veld"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__visibility__hidden
+msgid "Hidden"
+msgstr "Verborgen"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__id
+msgid "ID"
+msgstr "ID"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__label
+msgid "Label"
+msgstr "Label"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,help:bs_checkout_fields.field_website_checkout_field__label
+msgid "Leave empty to keep the shop's own wording for this field."
+msgstr "Laat leeg om de eigen benaming van de winkel voor dit veld te behouden."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__visibility
+msgid "On the form"
+msgstr "Op het formulier"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__phone
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Phone"
+msgstr "Telefoon"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__required
+msgid "Required"
+msgstr "Verplicht"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__sequence
+msgid "Sequence"
+msgstr "Reeks"
+
+#. module: bs_checkout_fields
+#: model:ir.module.module,summary:base.module_bs_checkout_fields
+msgid "Show, hide, require and rename the address fields of the shop's checkout: a shorter form for the fields you do not need, and a server-side check for the ones you do."
+msgstr "Toon, verberg, verplicht en hernoem de adresvelden van het afrekenen van de winkel: een korter formulier voor de velden die u niet nodig heeft, en een controle op de server voor de velden die u wel nodig heeft."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__visibility__visible
+msgid "Shown"
+msgstr "Getoond"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__stock_label
+msgid "Stock Label"
+msgstr "Oorspronkelijke benaming"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__street
+msgid "Street"
+msgstr "Straat"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__street2
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Street 2"
+msgstr "Straat 2"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Street and Number"
+msgstr "Straat en huisnummer"
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be both hidden and required."
+msgstr "Het veld %(field)s kan niet zowel verborgen als verplicht zijn."
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be hidden: the shop needs it to build an address it can deliver to or invoice."
+msgstr "Het veld %(field)s kan niet verborgen worden: de winkel heeft het nodig om een adres te maken waarnaar geleverd of gefactureerd kan worden."
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be made required here: the shop either always asks for it already, or does not show it on every address form."
+msgstr "Het veld %(field)s kan hier niet verplicht worden: de winkel vraagt het toch al altijd of toont het niet op elk adresformulier."
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid ""
+"The address form of the shop. Hide a field the shop does not\n"
+"                        need, ask for one it usually leaves optional, or give it the\n"
+"                        wording your customers use. Street and Country stay: the shop\n"
+"                        cannot deliver an address without them."
+msgstr "Het adresformulier van de winkel. Verberg een veld dat de winkel niet nodig heeft, maak een veld verplicht dat meestal optioneel is, of geef het de benaming die uw klanten gebruiken. Straat en land blijven: zonder die twee kan de winkel een adres niet leveren."
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid "The shop's own wording"
+msgstr "De eigen benaming van de winkel"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__vat
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "VAT"
+msgstr "BTW"
+
+#. module: bs_checkout_fields
+#: model:ir.model,name:bs_checkout_fields.model_website
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__website_id
+msgid "Website"
+msgstr "Website"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__zip
+msgid "Zip"
+msgstr "Postcode"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Zip Code"
+msgstr "Postcode"

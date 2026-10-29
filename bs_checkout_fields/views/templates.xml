@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- The address form of the shop. In 15.0 the fields are written inline in
+         `website_sale.address` and most wrappers are styled by a computed
+         `t-attf-class` rather than an id, so the anchors here are the `for` of
+         each label and, for the wrappers, the class token the template puts in
+         `t-attf-class`. `hasclass()` only reads a static `class` attribute,
+         which is why `contains(@t-attf-class, ...)` is used instead.
+
+         Each field gets three touches at most:
+           * a `t-if` that removes the whole wrapper — a hidden field must not
+             be in the HTML at all, not merely displayed: none;
+           * `t-att-required` on the input, which is what the browser enforces
+             and what makes the field's own marker appear (the shop marks a
+             required label with the absence of `label-optional`);
+           * the label, so the merchant's wording can replace the shop's, with
+             the shop's own text kept in the `t-else` branch so it stays a
+             translatable term of the arch. -->
+    <template id="address_form_fields" inherit_id="website_sale.address"
+              name="Checkout Address Fields">
+
+        <!-- Phone -->
+        <xpath expr="//div[@id='div_phone']/input" position="attributes">
+            <attribute name="t-att-required">website._checkout_field_required('phone') and 'required' or None</attribute>
+        </xpath>
+        <xpath expr="//label[@for='phone']" position="replace">
+            <label class="col-form-label" for="phone">
+                <t t-if="website._checkout_field_label('phone')" t-esc="website._checkout_field_label('phone')"/>
+                <t t-else="">Phone</t>
+            </label>
+        </xpath>
+
+        <!-- Street 2 -->
+        <xpath expr="//div[contains(@t-attf-class, 'div_street2')]" position="attributes">
+            <attribute name="t-if">not website._checkout_field_hidden('street2')</attribute>
+        </xpath>
+        <xpath expr="//input[@name='street2']" position="attributes">
+            <attribute name="t-att-required">website._checkout_field_required('street2') and 'required' or None</attribute>
+        </xpath>
+        <xpath expr="//label[@for='street2']" position="replace">
+            <label t-attf-class="col-form-label #{'label-optional' if not website._checkout_field_required('street2') else ''}" for="street2">
+                <t t-if="website._checkout_field_label('street2')" t-esc="website._checkout_field_label('street2')"/>
+                <t t-else="">Street 2</t>
+            </label>
+        </xpath>
+
+        <!-- Zip, both sides of the city: the form renders the zip block before
+             or after the city depending on the country, as two copies of the
+             same markup inside their own `t-if`. These series locate only the
+             first node an xpath matches, so the two copies need one set of
+             xpaths each — a single `//input[@name='zip']` would silently leave
+             the block that is actually rendered untouched. -->
+        <xpath expr="//t[@t-if=&quot;'zip' in zip_city and zip_city.index('zip') &lt; zip_city.index('city')&quot;]/div/input" position="attributes">
+            <attribute name="t-att-required">website._checkout_field_required('zip') and 'required' or None</attribute>
+        </xpath>
+        <xpath expr="//t[@t-if=&quot;'zip' in zip_city and zip_city.index('zip') &lt; zip_city.index('city')&quot;]/div/label" position="replace">
+            <label t-attf-class="col-form-label #{'label-optional' if not website._checkout_field_required('zip') else ''}" for="zip">
+                <t t-if="website._checkout_field_label('zip')" t-esc="website._checkout_field_label('zip')"/>
+                <t t-else="">Zip Code</t>
+            </label>
+        </xpath>
+        <xpath expr="//t[@t-if=&quot;'zip' in zip_city and zip_city.index('zip') &gt; zip_city.index('city')&quot;]/div/input" position="attributes">
+            <attribute name="t-att-required">website._checkout_field_required('zip') and 'required' or None</attribute>
+        </xpath>
+        <xpath expr="//t[@t-if=&quot;'zip' in zip_city and zip_city.index('zip') &gt; zip_city.index('city')&quot;]/div/label" position="replace">
+            <label t-attf-class="col-form-label #{'label-optional' if not website._checkout_field_required('zip') else ''}" for="zip">
+                <t t-if="website._checkout_field_label('zip')" t-esc="website._checkout_field_label('zip')"/>
+                <t t-else="">Zip Code</t>
+            </label>
+        </xpath>
+
+        <!-- City -->
+        <xpath expr="//label[@for='city']" position="replace">
+            <label class="col-form-label" for="city">
+                <t t-if="website._checkout_field_label('city')" t-esc="website._checkout_field_label('city')"/>
+                <t t-else="">City</t>
+            </label>
+        </xpath>
+
+        <!-- Country: shown, marked, but never hidden and never a choice. -->
+        <xpath expr="//label[@for='country_id']" position="replace">
+            <label class="col-form-label" for="country_id">
+                <t t-if="website._checkout_field_label('country')" t-esc="website._checkout_field_label('country')"/>
+                <t t-else="">Country</t>
+            </label>
+        </xpath>
+
+        <!-- Street: the shop's own label carries a responsive span for the
+             " and Number" half; replacing the label replaces that too. -->
+        <xpath expr="//label[@for='street']" position="replace">
+            <label class="col-form-label" for="street">
+                <t t-if="website._checkout_field_label('street')" t-esc="website._checkout_field_label('street')"/>
+                <t t-else="">Street and Number</t>
+            </label>
+        </xpath>
+
+        <!-- Company: part of the optional B2B block, on a billing address only.
+             Its wrapper carries neither id nor class, so the input names it. -->
+        <xpath expr="//input[@name='company_name']/.." position="attributes">
+            <attribute name="t-if">not website._checkout_field_hidden('company')</attribute>
+        </xpath>
+        <xpath expr="//label[@for='company_name']" position="replace">
+            <label class="col-form-label font-weight-normal label-optional" for="company_name">
+                <t t-if="website._checkout_field_label('company')" t-esc="website._checkout_field_label('company')"/>
+                <t t-else="">Company Name</t>
+            </label>
+        </xpath>
+
+        <!-- VAT -->
+        <xpath expr="//div[contains(@t-attf-class, 'div_vat')]" position="attributes">
+            <attribute name="t-if">not website._checkout_field_hidden('vat')</attribute>
+        </xpath>
+        <xpath expr="//label[@for='vat']" position="replace">
+            <label class="col-form-label font-weight-normal label-optional" for="vat">
+                <t t-if="website._checkout_field_label('vat')" t-esc="website._checkout_field_label('vat')"/>
+                <t t-else="">TIN / VAT</t>
+            </label>
+        </xpath>
+
+    </template>
+
+</odoo>
