@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- The settings block: the eight fields, once, on the website's own form.
+         In 15.0 the website's settings are still edited on the website record
+         (Website > Configuration > Websites), whose form has no notebook page
+         to spare, so the block is a separator and a group below "Other info".
+         The list has no "Add a line" and no bin icon on purpose: the set of
+         fields is the checkout's, not a list to build. -->
+    <record id="view_website_form_checkout_fields" model="ir.ui.view">
+        <field name="name">website.form.checkout.fields</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='other']" position="after">
+                <div name="checkout_fields">
+                    <separator name="checkout_fields" string="Checkout Fields"/>
+                    <div class="text-muted">
+                        The address form of the shop. Hide a field the shop does not
+                        need, ask for one it usually leaves optional, or give it the
+                        wording your customers use. Street and Country stay: the shop
+                        cannot deliver an address without them.
+                    </div>
+                    <group name="checkout_fields">
+                        <field name="checkout_field_ids" nolabel="1">
+                            <tree editable="bottom" create="false" delete="false">
+                                <field name="sequence" widget="handle"/>
+                                <field name="stock_label" string="Field" readonly="1"/>
+                                <field name="visibility" attrs="{'readonly': [('can_be_hidden', '=', False)]}"/>
+                                <field name="required" attrs="{'readonly': [('can_be_required', '=', False)]}"/>
+                                <field name="label" placeholder="The shop's own wording"/>
+                                <field name="can_be_hidden" invisible="1"/>
+                                <field name="can_be_required" invisible="1"/>
+                                <field name="field_name" invisible="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
