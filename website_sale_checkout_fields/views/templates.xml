@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- The address form of the shop, and the portal's own copy of it, which is
+         the same template: `website_sale.address_form_fields` is a primary copy
+         of `portal.address_form_fields`, so inheriting the portal one reaches
+         both pages with one set of xpaths.
+
+         Each field gets three touches at most:
+           * a `t-if` that removes the whole wrapper: a hidden field must not be
+             in the HTML at all, not merely displayed: none;
+           * `t-att-required` on the input, which is what the browser enforces
+             and what makes the field's own marker appear (the shop marks a
+             required label with the absence of `label-optional`, see
+             `.col-form-label:not(.label-optional)::after` in the portal's CSS);
+           * the label, so the merchant's wording can replace the shop's, with
+             the shop's own text kept in the `t-else` branch so it stays a
+             translatable term of the arch. -->
+    <template id="address_form_fields" inherit_id="portal.address_form_fields"
+              name="Checkout Address Fields">
+
+        <!-- Phone -->
+        <xpath expr="//div[@id='div_phone']/input" position="attributes">
+            <attribute name="t-att-required">website._checkout_field_required('phone') and 'required' or None</attribute>
+        </xpath>
+        <xpath expr="//div[@id='div_phone']/label" position="replace">
+            <label class="col-form-label" for="o_phone">
+                <t t-if="website._checkout_field_label('phone')" t-out="website._checkout_field_label('phone')"/>
+                <t t-else="">Phone</t>
+            </label>
+        </xpath>
+
+        <!-- Street 2 -->
+        <xpath expr="//div[@id='div_street2']" position="attributes">
+            <attribute name="t-if">not website._checkout_field_hidden('street2')</attribute>
+        </xpath>
+        <xpath expr="//div[@id='div_street2']/input" position="attributes">
+            <attribute name="t-att-required">website._checkout_field_required('street2') and 'required' or None</attribute>
+        </xpath>
+        <xpath expr="//div[@id='div_street2']/label" position="replace">
+            <label t-attf-class="col-form-label #{'label-optional' if not website._checkout_field_required('street2') else ''}" for="o_street2">
+                <t t-if="website._checkout_field_label('street2')" t-out="website._checkout_field_label('street2')"/>
+                <t t-else="">Apartment, suite, etc.</t>
+            </label>
+        </xpath>
+
+        <!-- Zip, both sides of the city: the form renders the zip block before
+             or after the city depending on the country, and both carry the
+             same id and label, so one xpath reaches both. -->
+        <xpath expr="//div[@id='div_zip']/input" position="attributes">
+            <attribute name="t-att-required">website._checkout_field_required('zip') and 'required' or None</attribute>
+        </xpath>
+        <xpath expr="//div[@id='div_zip']/label" position="replace">
+            <label class="col-form-label" for="o_zip">
+                <t t-if="website._checkout_field_label('zip')" t-out="website._checkout_field_label('zip')"/>
+                <t t-else="">Zip Code</t>
+            </label>
+        </xpath>
+
+        <!-- City -->
+        <xpath expr="//div[@id='div_city']/label" position="replace">
+            <label class="col-form-label" for="o_city">
+                <t t-if="website._checkout_field_label('city')" t-out="website._checkout_field_label('city')"/>
+                <t t-else="">City</t>
+            </label>
+        </xpath>
+
+        <!-- Country: shown, marked, but never hidden and never a choice. -->
+        <xpath expr="//div[@id='div_country']/label" position="replace">
+            <label class="col-form-label" for="o_country_id">
+                <t t-if="website._checkout_field_label('country')" t-out="website._checkout_field_label('country')"/>
+                <t t-else="">Country</t>
+            </label>
+        </xpath>
+
+        <!-- Street -->
+        <xpath expr="//div[@id='div_street']/label" position="replace">
+            <label class="col-form-label" for="o_street">
+                <t t-if="website._checkout_field_label('street')" t-out="website._checkout_field_label('street')"/>
+                <t t-else="">Street and Number</t>
+            </label>
+        </xpath>
+
+        <!-- Company: part of the optional B2B block, on a billing address only. -->
+        <xpath expr="//div[@id='company_name_div']" position="attributes">
+            <attribute name="t-if">not website._checkout_field_hidden('company')</attribute>
+        </xpath>
+        <xpath expr="//div[@id='company_name_div']/label" position="replace">
+            <label class="col-form-label fw-normal label-optional" for="o_company_name">
+                <t t-if="website._checkout_field_label('company')" t-out="website._checkout_field_label('company')"/>
+                <t t-else="">Company Name</t>
+            </label>
+        </xpath>
+
+        <!-- VAT: the label is the country's own ("VAT", "NIF", ...), so the
+             merchant's wording replaces it only when there is one. -->
+        <xpath expr="//div[@id='div_vat']" position="attributes">
+            <attribute name="t-if">not website._checkout_field_hidden('vat')</attribute>
+        </xpath>
+        <xpath expr="//div[@id='div_vat']/label" position="replace">
+            <label class="col-form-label fw-normal label-optional" for="o_vat">
+                <t t-if="website._checkout_field_label('vat')" t-out="website._checkout_field_label('vat')"/>
+                <t t-else="" t-out="vat_label"/>
+            </label>
+        </xpath>
+
+        <!-- The form posts the list of fields the browser must enforce, and the
+             shop's own script reads it back after a country change ("Support
+             for customizations and additional required fields"). Spelling the
+             website's requirements there is what keeps the asterisk on the
+             field after that round trip. -->
+        <xpath expr="//input[@name='required_fields']" position="attributes">
+            <attribute name="t-att-value">'name,email' + website._checkout_required_suffix()</attribute>
+        </xpath>
+
+    </template>
+
+</odoo>
