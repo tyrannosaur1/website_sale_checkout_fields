@@ -1,0 +1,5 @@
+id,name,model_id,group_id/id,operation,domain
+access_website_checkout_field_public,website.checkout.field public,website.checkout.field,base.group_public,r,
+access_website_checkout_field_portal,website.checkout.field portal,website.checkout.field,base.group_portal,r,
+access_website_checkout_field_user,website.checkout.field user,website.checkout.field,base.group_user,r,
+access_website_checkout_field_designer,website.checkout.field designer,website.checkout.field,website.group_website_designer,crud,
