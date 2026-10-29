@@ -1,0 +1,242 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_sale_checkout_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20250909\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-29 05:44+0000\n"
+"PO-Revision-Date: 2026-10-29\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: website_sale_checkout_fields
+#. odoo-python
+#: code:addons/website_sale_checkout_fields/models/website.py:0
+msgid "%(field)s is required by this website's checkout settings."
+msgstr "%(field)s é obrigatório nas configurações de checkout deste site."
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,help:website_sale_checkout_fields.field_website_checkout_field__visibility
+msgid "A hidden field is not rendered and its value is left untouched on addresses that already carry one."
+msgstr "Um campo oculto não é exibido e seu valor permanece intacto nos endereços que já o possuem."
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,help:website_sale_checkout_fields.field_website_checkout_field__required
+msgid "Ask for this field on every checkout address, even on the shipping form where the shop would otherwise leave it empty."
+msgstr "Peça este campo em todos os endereços do checkout, inclusive no formulário de entrega em que a loja normalmente o deixaria vazio."
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__can_be_hidden
+msgid "Can Be Hidden"
+msgstr "Pode ser ocultado"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__can_be_required
+msgid "Can Be Required"
+msgstr "Pode ser obrigatório"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model,name:website_sale_checkout_fields.model_website_checkout_field
+msgid "Checkout Address Field"
+msgstr "Campo de endereço do checkout"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website__checkout_field_ids
+msgid "Checkout Address Fields"
+msgstr "Campos de endereço do checkout"
+
+#. module: website_sale_checkout_fields
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.view_website_form_checkout_fields
+msgid "Checkout Fields"
+msgstr "Campos do checkout"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__city
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "City"
+msgstr "Cidade"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__company
+msgid "Company"
+msgstr "Empresa"
+
+#. module: website_sale_checkout_fields
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "Company Name"
+msgstr "Nome da Empresa"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__country
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "Country"
+msgstr "País"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__field_name
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.view_website_form_checkout_fields
+msgid "Field"
+msgstr "Campo"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__visibility__hidden
+msgid "Hidden"
+msgstr "Oculto"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__label
+msgid "Label"
+msgstr "Rótulo"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field____last_update
+msgid "Last Modified on"
+msgstr "Última modificação em"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__write_uid
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__write_date
+msgid "Last Updated on"
+msgstr "Última atualização em"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,help:website_sale_checkout_fields.field_website_checkout_field__label
+msgid "Leave empty to keep the shop's own wording for this field."
+msgstr "Deixe vazio para manter o texto próprio da loja para este campo."
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__visibility
+msgid "On the form"
+msgstr "No formulário"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__phone
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "Phone"
+msgstr "Telefone"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__required
+msgid "Required"
+msgstr "Necessário"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__sequence
+msgid "Sequence"
+msgstr "Sequência"
+
+#. module: website_sale_checkout_fields
+#: model:ir.module.module,summary:base.module_website_sale_checkout_fields
+msgid "Show, hide, require and rename the address fields of the shop's checkout: a shorter form for the fields you do not need, and a server-side check for the ones you do."
+msgstr "Exiba, oculte, torne obrigatórios e renomeie os campos de endereço do checkout da loja: um formulário mais curto para os campos que você não precisa e uma verificação no servidor para os que precisa."
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__visibility__visible
+msgid "Shown"
+msgstr "Exibido"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__stock_label
+msgid "Stock Label"
+msgstr "Rótulo original"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__street
+msgid "Street"
+msgstr "Endereço"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__street2
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "Street 2"
+msgstr "Rua 2"
+
+#. module: website_sale_checkout_fields
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "Street and Number"
+msgstr "Rua e número"
+
+#. module: website_sale_checkout_fields
+#. odoo-python
+#: code:addons/website_sale_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be both hidden and required."
+msgstr "O campo %(field)s não pode ser oculto e obrigatório ao mesmo tempo."
+
+#. module: website_sale_checkout_fields
+#. odoo-python
+#: code:addons/website_sale_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be hidden: the shop needs it to build an address it can deliver to or invoice."
+msgstr "O campo %(field)s não pode ser ocultado: a loja precisa dele para montar um endereço para entrega ou faturamento."
+
+#. module: website_sale_checkout_fields
+#. odoo-python
+#: code:addons/website_sale_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be made required here: the shop either always asks for it already, or does not show it on every address form."
+msgstr "O campo %(field)s não pode ser tornado obrigatório aqui: a loja já o pede sempre ou não o mostra em todos os formulários de endereço."
+
+#. module: website_sale_checkout_fields
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.view_website_form_checkout_fields
+msgid ""
+"The address form of the shop. Hide a field the shop does not\n"
+"                        need, ask for one it usually leaves optional, or give it the\n"
+"                        wording your customers use. Street and Country stay: the shop\n"
+"                        cannot deliver an address without them."
+msgstr "O formulário de endereço da loja. Oculte um campo que a loja não precisa, torne obrigatório um campo que costuma ser opcional ou dê a ele o texto que seus clientes usam. Rua e país permanecem: sem eles a loja não consegue entregar um endereço."
+
+#. module: website_sale_checkout_fields
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.view_website_form_checkout_fields
+msgid "The shop's own wording"
+msgstr "O texto próprio da loja"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__vat
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "VAT"
+msgstr "Imposto"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model,name:website_sale_checkout_fields.model_website
+#: model:ir.model.fields,field_description:website_sale_checkout_fields.field_website_checkout_field__website_id
+msgid "Website"
+msgstr "Site"
+
+#. module: website_sale_checkout_fields
+#: model:ir.model.fields.selection,name:website_sale_checkout_fields.selection__website_checkout_field__field_name__zip
+msgid "Zip"
+msgstr "CEP"
+
+#. module: website_sale_checkout_fields
+#: model_terms:ir.ui.view,arch_db:website_sale_checkout_fields.address_form_fields
+msgid "Zip Code"
+msgstr "Código Postal"
