@@ -1,0 +1,240 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bs_checkout_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20261015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-29 05:46+0000\n"
+"PO-Revision-Date: 2026-10-29\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/website.py:0
+msgid "%(field)s is required by this website's checkout settings."
+msgstr "Поле «%(field)s» обязательно согласно настройкам оформления заказа этого сайта."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,help:bs_checkout_fields.field_website_checkout_field__visibility
+msgid "A hidden field is not rendered and its value is left untouched on addresses that already carry one."
+msgstr "Скрытое поле не выводится, а его значение остаётся неизменным у адресов, где оно уже заполнено."
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Apartment, suite, etc."
+msgstr "Квартира, люкс и т.д."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,help:bs_checkout_fields.field_website_checkout_field__required
+msgid "Ask for this field on every checkout address, even on the shipping form where the shop would otherwise leave it empty."
+msgstr "Запрашивайте это поле для каждого адреса при оформлении заказа, включая форму доставки, где магазин обычно оставляет его пустым."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__can_be_hidden
+msgid "Can Be Hidden"
+msgstr "Можно скрыть"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__can_be_required
+msgid "Can Be Required"
+msgstr "Можно сделать обязательным"
+
+#. module: bs_checkout_fields
+#: model:ir.model,name:bs_checkout_fields.model_website_checkout_field
+msgid "Checkout Address Field"
+msgstr "Поле адреса при оформлении"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website__checkout_field_ids
+msgid "Checkout Address Fields"
+msgstr "Поля адреса при оформлении"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid "Checkout Fields"
+msgstr "Поля оформления заказа"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__city
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "City"
+msgstr "Город"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__company
+msgid "Company"
+msgstr "Компания"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Company Name"
+msgstr "Название компании"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__country
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Country"
+msgstr "Страна"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__create_uid
+msgid "Created by"
+msgstr "Создано:"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__create_date
+msgid "Created on"
+msgstr "Дата создания:"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__field_name
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid "Field"
+msgstr "Поле"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__visibility__hidden
+msgid "Hidden"
+msgstr "Скрывать"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__id
+msgid "ID"
+msgstr "ID"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__label
+msgid "Label"
+msgstr "Надпись"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__write_uid
+msgid "Last Updated by"
+msgstr "Последнее обновление:"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления:"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,help:bs_checkout_fields.field_website_checkout_field__label
+msgid "Leave empty to keep the shop's own wording for this field."
+msgstr "Оставьте пустым, чтобы сохранить собственное название поля в магазине."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__visibility
+msgid "On the form"
+msgstr "В форме"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__phone
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__required
+msgid "Required"
+msgstr "Обязательное"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__sequence
+msgid "Sequence"
+msgstr "Последовательность"
+
+#. module: bs_checkout_fields
+#: model:ir.module.module,summary:base.module_bs_checkout_fields
+msgid "Show, hide, require and rename the address fields of the shop's checkout: a shorter form for the fields you do not need, and a server-side check for the ones you do."
+msgstr "Показывайте, скрывайте, делайте обязательными и переименовывайте поля адреса при оформлении заказа: более короткая форма для ненужных полей и серверная проверка для нужных."
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__visibility__visible
+msgid "Shown"
+msgstr "Показывать"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__stock_label
+msgid "Stock Label"
+msgstr "Исходное название"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__street
+msgid "Street"
+msgstr "Улица"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__street2
+msgid "Street 2"
+msgstr "Улица 2"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Street and Number"
+msgstr "Улица и дом"
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be both hidden and required."
+msgstr "Поле «%(field)s» не может быть одновременно скрытым и обязательным."
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be hidden: the shop needs it to build an address it can deliver to or invoice."
+msgstr "Поле «%(field)s» нельзя скрыть: магазину оно нужно, чтобы составить адрес для доставки или выставления счёта."
+
+#. module: bs_checkout_fields
+#. odoo-python
+#: code:addons/bs_checkout_fields/models/checkout_field.py:0
+msgid "The %(field)s field cannot be made required here: the shop either always asks for it already, or does not show it on every address form."
+msgstr "Поле «%(field)s» нельзя сделать обязательным: магазин либо уже всегда его запрашивает, либо показывает не во всех формах адреса."
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid ""
+"The address form of the shop. Hide a field the shop does not\n"
+"                        need, ask for one it usually leaves optional, or give it the\n"
+"                        wording your customers use. Street and Country stay: the shop\n"
+"                        cannot deliver an address without them."
+msgstr "Форма адреса магазина. Скройте ненужное поле, сделайте обязательным обычно необязательное поле или задайте ему название, привычное вашим клиентам. Улица и страна остаются: без них магазин не сможет доставить заказ."
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.view_website_form_checkout_fields
+msgid "The shop's own wording"
+msgstr "Собственное название магазина"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__vat
+msgid "VAT"
+msgstr "НДС"
+
+#. module: bs_checkout_fields
+#: model:ir.model,name:bs_checkout_fields.model_website
+#: model:ir.model.fields,field_description:bs_checkout_fields.field_website_checkout_field__website_id
+msgid "Website"
+msgstr "Веб-сайт"
+
+#. module: bs_checkout_fields
+#: model:ir.model.fields.selection,name:bs_checkout_fields.selection__website_checkout_field__field_name__zip
+msgid "Zip"
+msgstr "Почтовый индекс"
+
+#. module: bs_checkout_fields
+#: model_terms:ir.ui.view,arch_db:bs_checkout_fields.address_form_fields
+msgid "Zip Code"
+msgstr "Почтовый индекс"
