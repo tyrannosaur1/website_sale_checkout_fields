@@ -2,7 +2,7 @@
 
 The checkout asks everyone the same six questions. Decide per website which ones your shop actually needs, and hold the checkout to your answer.
 
-Odoo 16.0 – 20.0. One branch per series, the branch name is the series.
+Odoo 10.0 – 20.0. One branch per series, the branch name is the series.
 
 ## What it does
 
